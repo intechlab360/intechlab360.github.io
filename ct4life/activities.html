@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Activities — CT4Life | Willamette University</title>
+  <meta name="description" content="Explore plugged and unplugged computational thinking learning activities designed for older adult lifelong learners." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/ct4life-theme.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="ct-header">
+    <div class="ct-nav-container">
+      <a href="./index.html" class="ct-logo-badge">
+        <div class="ct-logo-icon">CT</div>
+        <div class="ct-logo-text">
+          <h1>CT4Life</h1>
+          <span>Lifelong Learning &bull; Willamette</span>
+        </div>
+      </a>
+
+      <button class="ct-mobile-toggle" id="ctMenuBtn" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="ct-nav-links" id="ctNavLinks">
+        <li><a href="../index.html" class="ct-btn-back"><i class="fa-solid fa-arrow-left"></i> iNTech Lab</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./activities.html" class="active">Learning Activities</a></li>
+        <li><a href="./publications.html">Publications</a></li>
+        <li><a href="./lessons.html">Lessons &amp; Tools</a></li>
+        <li><a href="./newsletters.html">Newsletters</a></li>
+        <li><a href="./adverts.html">Adverts &amp; Flyers</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="ct-hero-banner" style="padding: 3.5rem 1.5rem 2.75rem;">
+    <div class="ct-container">
+      <div class="ct-eyebrow">
+        <i class="fa-solid fa-puzzle-piece"></i> Cognitive Stimulation &amp; Collaboration
+      </div>
+      <h1 class="ct-hero-title">
+        Hands-On Learning Activities
+        <span class="highlight">Unplugged Puzzles &amp; Guided Digital Exploration</span>
+      </h1>
+      <p class="ct-hero-subhead">
+        Our research investigates both unplugged (physical, conversational, hands-on) and plugged (visual interactive software) activities created specifically for older adults.
+      </p>
+    </div>
+  </section>
+
+  <!-- Activities Filter / Overview -->
+  <section class="ct-section">
+    <div class="ct-container">
+      
+      <!-- Activity Category 1: Unplugged Activities -->
+      <div style="margin-bottom: 3.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+          <span style="background: var(--field); color: var(--midnight-deep); font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 999px; text-transform: uppercase;">
+            Category 01
+          </span>
+          <span style="color: var(--brick); font-weight: 700; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.1em;">Hands-On Physical</span>
+        </div>
+        <h2 class="ct-section-title" style="font-size: 2.2rem;">Unplugged Computational Thinking</h2>
+        <p style="color: #33454E; max-width: 800px; font-size: 1.05rem;">
+          No screens or computers! These activities use physical cards, everyday scenarios, and collaborative discussion to exercise algorithmic planning, pattern identification, and problem decomposition.
+        </p>
+
+        <div class="ct-cards-grid">
+          
+          <!-- Activity 1 -->
+          <div class="ct-card">
+            <div>
+              <div class="ct-card-icon" style="background: var(--field-light); color: var(--field);">
+                <i class="fa-solid fa-route"></i>
+              </div>
+              <h3>The Daily Route Optimizer</h3>
+              <p>
+                <strong>Concept:</strong> Algorithmic sequencing &amp; optimization.<br/>
+                Participants work in pairs with route cards of Salem landmarks (Riverfront Park, Capitol Mall, Bush's Pasture) to design optimal travel recipes under everyday constraints like traffic or store hours.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.82rem; color: #666;">
+              <i class="fa-regular fa-clock"></i> 25 mins &bull; <i class="fa-solid fa-users"></i> Small groups
+            </div>
+          </div>
+
+          <!-- Activity 2 -->
+          <div class="ct-card border-wave">
+            <div>
+              <div class="ct-card-icon" style="background: var(--wave-light); color: #0f8b9c;">
+                <i class="fa-solid fa-shapes"></i>
+              </div>
+              <h3>Pattern Detective &amp; Card Sorting</h3>
+              <p>
+                <strong>Concept:</strong> Pattern recognition &amp; data categorization.<br/>
+                Using tactile sorting cards with varied traits, participants identify latent patterns, develop taxonomy rules, and experience how search algorithms organize large libraries of information.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.82rem; color: #666;">
+              <i class="fa-regular fa-clock"></i> 20 mins &bull; <i class="fa-solid fa-brain"></i> Logic puzzle
+            </div>
+          </div>
+
+          <!-- Activity 3 -->
+          <div class="ct-card border-brick">
+            <div>
+              <div class="ct-card-icon" style="background: #fceee9; color: var(--brick);">
+                <i class="fa-solid fa-sitemap"></i>
+              </div>
+              <h3>Recipe Decomposition Challenge</h3>
+              <p>
+                <strong>Concept:</strong> Problem abstraction &amp; decomposition.<br/>
+                Participants take a complex culinary or woodworking project and break it down into atomic modular sub-routines, discovering how modular abstraction prevents overwhelm in problem solving.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.82rem; color: #666;">
+              <i class="fa-regular fa-clock"></i> 30 mins &bull; <i class="fa-solid fa-comments"></i> Collaborative
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Activity Category 2: Plugged & Guided Digital -->
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+          <span style="background: var(--wave); color: var(--midnight-deep); font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 999px; text-transform: uppercase;">
+            Category 02
+          </span>
+          <span style="color: var(--midnight); font-weight: 700; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.1em;">Guided Digital Exploration</span>
+        </div>
+        <h2 class="ct-section-title" style="font-size: 2.2rem;">Plugged Visual Co-Design</h2>
+        <p style="color: #33454E; max-width: 800px; font-size: 1.05rem;">
+          Under the one-on-one guidance of friendly Willamette student mentors, participants try intuitive visual interfaces that demonstrate the joy of creative digital tools.
+        </p>
+
+        <div class="ct-cards-grid">
+          
+          <!-- Plugged 1 -->
+          <div class="ct-card border-midnight">
+            <div>
+              <div class="ct-card-icon" style="background: #dde9ee; color: var(--midnight);">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h3>Visual Storyboarding &amp; Block Puzzles</h3>
+              <p>
+                <strong>Tool:</strong> Block-based visual canvas.<br/>
+                Seniors pair with undergraduate student guides to snap together logic blocks that animate custom digital stories, family memories, or interactive greeting cards.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.82rem; color: #666;">
+              <i class="fa-solid fa-chalkboard-user"></i> 1-on-1 Student Guidance
+            </div>
+          </div>
+
+          <!-- Plugged 2 -->
+          <div class="ct-card border-field">
+            <div>
+              <div class="ct-card-icon" style="background: var(--field-light); color: var(--field);">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <h3>iThinkSmart Logic Mini-Games</h3>
+              <p>
+                <strong>Tool:</strong> Accessible cognitive puzzles.<br/>
+                Enjoy gentle logic challenges like the River Crossing puzzle and Tower of Hanoi adapted for senior accessibility with large fonts, relaxed pacing, and clear goal visualization.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.82rem; color: #666;">
+              <i class="fa-solid fa-heart"></i> Relaxed &amp; Self-Paced
+            </div>
+          </div>
+
+          <!-- Plugged 3 -->
+          <div class="ct-card border-brick">
+            <div>
+              <div class="ct-card-icon" style="background: #fceee9; color: var(--brick);">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h3>Community Persona Co-Design</h3>
+              <p>
+                <strong>Tool:</strong> Interactive design thinking canvases.<br/>
+                Participants evaluate everyday apps (banking, healthcare, smart TVs) and redesign their interfaces to remove frustrating clutter, providing valuable data for our research lab.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.82rem; color: #666;">
+              <i class="fa-solid fa-pen-nib"></i> Participatory Design
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="ct-section" style="background: var(--cream-dark); text-align: center;">
+    <div class="ct-container">
+      <h2 class="ct-section-title" style="font-size: 2rem;">Want to Experience These Activities?</h2>
+      <p style="max-width: 600px; margin: 0 auto 1.5rem; color: #33454E;">
+        Join our upcoming Salem workshop sessions. Free participation, complimentary food, and a $10 gift card per workshop.
+      </p>
+      <a href="./adverts.html" style="background: var(--brick); color: #fff; font-weight: 800; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: var(--shadow-sm);">
+        <i class="fa-solid fa-calendar-check"></i> See Workshop Schedule &amp; Reserve Spot
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ct-footer">
+    <div class="ct-footer-inner">
+      <div>
+        <h4 class="font-fraunces">CT4Life Project</h4>
+        <p style="font-size: 0.85rem; line-height: 1.5; color: #b9d3e1;">
+          Computational Thinking for Life-Long Learners. iNTech Research Lab &bull; Willamette University.
+        </p>
+      </div>
+      <div>
+        <h4>Explore CT4Life</h4>
+        <ul>
+          <li><a href="./index.html">Home Overview</a></li>
+          <li><a href="./activities.html">Learning Activities</a></li>
+          <li><a href="./publications.html">Publications</a></li>
+          <li><a href="./lessons.html">Lessons &amp; Tools</a></li>
+          <li><a href="./adverts.html">Adverts &amp; Flyers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Dr. Fred Agbo &bull; <a href="mailto:fjagbo@willamette.edu">fjagbo@willamette.edu</a></li>
+          <li>Ford Hall 209, Willamette University</li>
+          <li><a href="../index.html">&larr; Return to iNTech Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ct-footer-bottom">
+      &copy; 2026 CT4Life Initiative &bull; Willamette University
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('ctMenuBtn');
+    const nav = document.getElementById('ctNavLinks');
+    btn.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

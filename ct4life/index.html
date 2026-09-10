@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CT4Life — Computational Thinking for Life-Long Learners | Willamette University</title>
+  <meta name="description" content="CT4Life empowers older adults (60+) in Oregon through co-designed computational thinking, problem-solving, and lifelong learning alongside Willamette University students." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CT4Life Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/ct4life-theme.css" />
+</head>
+<body>
+
+  <!-- ================= TOP NOTIFICATION ================= -->
+  <header class="ct-header">
+    <div class="ct-nav-container">
+      
+      <!-- Logo -->
+      <a href="./index.html" class="ct-logo-badge">
+        <div class="ct-logo-icon">CT</div>
+        <div class="ct-logo-text">
+          <h1>CT4Life</h1>
+          <span>Lifelong Learning &bull; Willamette</span>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="ct-mobile-toggle" id="ctMenuBtn" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <ul class="ct-nav-links" id="ctNavLinks">
+        <li><a href="../index.html" class="ct-btn-back"><i class="fa-solid fa-arrow-left"></i> iNTech Lab</a></li>
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./activities.html">Learning Activities</a></li>
+        <li><a href="./publications.html">Publications</a></li>
+        <li><a href="./lessons.html">Lessons &amp; Tools</a></li>
+        <li><a href="./newsletters.html">Newsletters</a></li>
+        <li><a href="./adverts.html">Adverts &amp; Flyers</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <!-- ================= HERO BANNER ================= -->
+  <section class="ct-hero-banner">
+    <div class="ct-container">
+      <div class="ct-eyebrow">
+        <i class="fa-solid fa-sparkles"></i> Willamette University &bull; iNTech Research Lab
+      </div>
+
+      <h1 class="ct-hero-title">
+        Shape the Future of Everyday Tech
+        <span class="highlight">No Coding Experience Required!</span>
+      </h1>
+
+      <p class="ct-hero-subhead">
+        Have you ever felt like modern technology wasn't designed with your generation in mind? You're right — and we need your wisdom and lived experience to co-design solutions that truly work.
+      </p>
+
+      <!-- SVG Illustration Inspired by Flyer -->
+      <div style="max-width: 440px; margin: 2rem auto 0;">
+        <svg viewBox="0 0 420 160" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <!-- Senior avatar -->
+          <circle cx="90" cy="70" r="34" fill="none" stroke="#5FCBDA" stroke-width="4"/>
+          <circle cx="90" cy="52" r="12" fill="#5FCBDA"/>
+          <path d="M70 92 Q90 72 110 92" fill="none" stroke="#5FCBDA" stroke-width="4" stroke-linecap="round"/>
+          <!-- Student avatar -->
+          <circle cx="330" cy="70" r="34" fill="none" stroke="#F19C49" stroke-width="4"/>
+          <circle cx="330" cy="52" r="12" fill="#F19C49"/>
+          <path d="M310 92 Q330 72 350 92" fill="none" stroke="#F19C49" stroke-width="4" stroke-linecap="round"/>
+          <!-- Connecting bridge -->
+          <path d="M120 80 Q210 130 300 80" fill="none" stroke="#FBF5EA" stroke-width="3" stroke-dasharray="3 8" stroke-linecap="round" opacity="0.7"/>
+          <!-- Idea bulb in center -->
+          <g transform="translate(190,20)">
+            <circle cx="20" cy="24" r="20" fill="none" stroke="#FBF5EA" stroke-width="4"/>
+            <path d="M12 32 L28 32 M14 38 L26 38" stroke="#FBF5EA" stroke-width="4" stroke-linecap="round"/>
+            <path d="M20 4 V0 M6 10 L2 6 M34 10 L38 6" stroke="#F19C49" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="./activities.html" style="background: var(--field); color: var(--midnight-deep); font-weight: 800; padding: 0.85rem 1.8rem; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: var(--shadow-md);">
+          <i class="fa-solid fa-puzzle-piece"></i> Explore Learning Activities
+        </a>
+        <a href="./adverts.html" style="background: rgba(255,255,255,0.12); color: #ffffff; font-weight: 700; padding: 0.85rem 1.8rem; border-radius: 999px; text-decoration: none; border: 1px solid rgba(255,255,255,0.3); display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-bullhorn"></i> View Workshop Adverts &amp; Dates
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTRO BAND ================= -->
+  <section class="ct-callout-banner">
+    <div class="ct-container">
+      <p>
+        The <b>CT4Life</b> (Computational Thinking for Life-Long Learners) project invites local Salem older adults and retirees to collaborate directly with Willamette University computer science students. Together, we co-design everyday problem-solving strategies and technology tools tailored to real lives.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= WHY PARTICIPATE / 4 PILLARS ================= -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <div class="ct-section-kicker">The Benefits</div>
+        <h2 class="ct-section-title">Why Participate in CT4Life?</h2>
+        <p style="color: var(--ink-muted);">
+          Our workshops are relaxed, social, and designed to foster mental vitality, friendship, and practical everyday skills.
+        </p>
+      </div>
+
+      <div class="ct-cards-grid">
+        
+        <!-- Pillar 1 -->
+        <div class="ct-card">
+          <div>
+            <div class="ct-card-icon" style="background: var(--field-light); color: var(--field);">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Keep Your Mind Active</h3>
+            <p>
+              Engage in interactive, brain-stimulating unplugged and plugged activities that exercise critical thinking, memory, pattern recognition, and everyday problem-solving.
+            </p>
+          </div>
+          <div style="margin-top: 1.25rem; font-size: 0.82rem; font-weight: 700; color: var(--field);">
+            Cognitive Stimulation &rarr;
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="ct-card border-wave">
+          <div>
+            <div class="ct-card-icon" style="background: var(--wave-light); color: #0f8b9c;">
+              <i class="fa-solid fa-hands-holding-child"></i>
+            </div>
+            <h3>Partner with Students</h3>
+            <p>
+              Work in small, friendly groups alongside energetic undergraduate tech guides from Willamette University who are eager to listen and learn from your life wisdom.
+            </p>
+          </div>
+          <div style="margin-top: 1.25rem; font-size: 0.82rem; font-weight: 700; color: #0f8b9c;">
+            Intergenerational Co-Design &rarr;
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="ct-card border-brick">
+          <div>
+            <div class="ct-card-icon" style="background: #fceee9; color: var(--brick);">
+              <i class="fa-solid fa-people-group"></i>
+            </div>
+            <h3>Connect with Community</h3>
+            <p>
+              Meet fellow Salem and Oregon neighbors who share your curiosity, combat social isolation, and celebrate the joy of lifelong discovery together.
+            </p>
+          </div>
+          <div style="margin-top: 1.25rem; font-size: 0.82rem; font-weight: 700; color: var(--brick);">
+            Social Engagement &rarr;
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="ct-card border-midnight">
+          <div>
+            <div class="ct-card-icon" style="background: #dde9ee; color: var(--midnight);">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <h3>Enjoy Great Perks</h3>
+            <p>
+              Enjoy complimentary coffee, refreshments, a <strong style="color: var(--brick);">$10 gift card per workshop session</strong>, and free bus ride coordination if you need transportation!
+            </p>
+          </div>
+          <div style="margin-top: 1.25rem; font-size: 0.82rem; font-weight: 700; color: var(--midnight);">
+            Free &amp; Supported &rarr;
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE SCIENCE: ANDRAGOGY & PROBLEM FRAMING ================= -->
+  <section class="ct-section" style="background: #ffffff; border-top: 1px solid #e7e9e4; border-bottom: 1px solid #e7e9e4;">
+    <div class="ct-container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: center;">
+        
+        <div>
+          <div class="ct-section-kicker">Research Grounding</div>
+          <h2 class="ct-section-title">Rooted in Malcolm Knowles' Andragogy Principles</h2>
+          <p style="color: var(--ink); margin-bottom: 1rem;">
+            Lifelong learning is the self-motivated pursuit of growing knowledge for personal well-being and social connection. Unlike youth schooling (pedagogy), adult learning (andragogy) requires distinct, respectful principles:
+          </p>
+
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="background: var(--field-light); color: var(--field); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.8rem;">1</span>
+              <div><strong>Self-Concept:</strong> Moving from dependent instruction to self-directed, respectful exploration.</div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="background: var(--field-light); color: var(--field); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.8rem;">2</span>
+              <div><strong>Life Experience:</strong> Treating past career and life knowledge as the richest asset in the room.</div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="background: var(--field-light); color: var(--field); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.8rem;">3</span>
+              <div><strong>Readiness to Learn:</strong> Focusing on practical tasks relevant to everyday autonomy and interest.</div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="background: var(--field-light); color: var(--field); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.8rem;">4</span>
+              <div><strong>Problem-Centered Orientation:</strong> Solving tangible puzzles rather than memorizing technical jargon.</div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="background: var(--field-light); color: var(--field); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.8rem;">5</span>
+              <div><strong>Internal Motivation:</strong> Fostering curiosity, cognitive resilience, and joyful accomplishment.</div>
+            </li>
+          </ul>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="./publications.html" style="color: var(--brick); font-weight: 700; text-decoration: underline;">
+              Read our ACM published paper on CT4Life Andragogy &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div style="background: var(--cream); padding: 2rem; border-radius: 20px; border: 2px dashed rgba(0, 59, 92, 0.2);">
+          <h3 class="font-fraunces" style="color: var(--midnight); font-size: 1.4rem; margin-bottom: 0.75rem;">
+            What Is Computational Thinking (CT)?
+          </h3>
+          <p style="font-size: 0.95rem; color: #33454E; margin-bottom: 1.25rem;">
+            Computational Thinking is <strong>not</strong> about becoming a computer programmer. It is a universal thought process we use every day to solve complex challenges:
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div style="background: #ffffff; padding: 1rem; border-radius: 12px; border-left: 4px solid var(--field);">
+              <strong style="color: var(--midnight); font-size: 0.9rem; display: block;">Decomposition</strong>
+              <span style="font-size: 0.82rem; color: #536B78;">Breaking a big challenge down into small, bite-sized steps.</span>
+            </div>
+            <div style="background: #ffffff; padding: 1rem; border-radius: 12px; border-left: 4px solid var(--wave);">
+              <strong style="color: var(--midnight); font-size: 0.9rem; display: block;">Pattern Recognition</strong>
+              <span style="font-size: 0.82rem; color: #536B78;">Spotting recurring trends and similarities in everyday life.</span>
+            </div>
+            <div style="background: #ffffff; padding: 1rem; border-radius: 12px; border-left: 4px solid var(--brick);">
+              <strong style="color: var(--midnight); font-size: 0.9rem; display: block;">Abstraction</strong>
+              <span style="font-size: 0.82rem; color: #536B78;">Focusing on what truly matters and filtering out unnecessary clutter.</span>
+            </div>
+            <div style="background: #ffffff; padding: 1rem; border-radius: 12px; border-left: 4px solid var(--midnight);">
+              <strong style="color: var(--midnight); font-size: 0.9rem; display: block;">Algorithms</strong>
+              <span style="font-size: 0.82rem; color: #536B78;">Creating clear, step-by-step recipes or plans to accomplish goals.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKSHOP DETAILS / FAST FACTS ================= -->
+  <section class="ct-section" style="background: var(--midnight); color: var(--cream);">
+    <div class="ct-container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 2.5rem;">
+        <div class="ct-section-kicker" style="color: var(--field);">Mark Your Calendar</div>
+        <h2 class="ct-section-title" style="color: #ffffff;">Workshop Quick Details</h2>
+        <p style="color: #dceaf1;">
+          Join us at Willamette University for an enjoyable 2-session workshop series.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+        
+        <div class="ct-detail-card">
+          <i class="fa-solid fa-calendar-days" style="color: var(--field); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+          <div>
+            <h4>Session Schedule</h4>
+            <p><b>Wed, Sept 30</b> &amp; <b>Mon, Nov 16</b><br/>10:20 AM – 11:50 AM (90 mins each)</p>
+          </div>
+        </div>
+
+        <div class="ct-detail-card">
+          <i class="fa-solid fa-location-dot" style="color: var(--field); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+          <div>
+            <h4>Campus Location</h4>
+            <p>Willamette University<br/><b>Lecture Hall / Ford Hall</b>, Salem, OR</p>
+          </div>
+        </div>
+
+        <div class="ct-detail-card">
+          <i class="fa-solid fa-basket-shopping" style="color: var(--field); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+          <div>
+            <h4>What to Bring</h4>
+            <p><b>Nothing!</b> Just your enthusiasm and lived experience.</p>
+          </div>
+        </div>
+
+        <div class="ct-detail-card">
+          <i class="fa-solid fa-bus" style="color: var(--field); font-size: 1.5rem; margin-top: 0.2rem;"></i>
+          <div>
+            <h4>Free Transportation</h4>
+            <p>Free <b>bus transit passes</b> provided on request.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="./adverts.html" style="background: var(--brick); color: #ffffff; font-weight: 800; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: var(--shadow-md);">
+          <i class="fa-solid fa-bullhorn"></i> View Complete Flyer &amp; Sign-Up Page &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ELIGIBILITY ================= -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div style="max-width: 750px; margin: 0 auto; background: var(--paper); border-radius: 20px; padding: 2.5rem; box-shadow: var(--shadow-sm); border-top: 6px solid var(--brick);">
+        <div class="ct-section-kicker">Participation Checklist</div>
+        <h2 class="ct-section-title" style="font-size: 2rem;">Who Can Join?</h2>
+        
+        <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; background: var(--cream); border-radius: 12px; padding: 1rem 1.25rem; font-weight: 600; color: var(--midnight);">
+            <i class="fa-solid fa-circle-check" style="color: var(--midnight); font-size: 1.25rem;"></i>
+            <span>Adults aged 60+ (priority for 70+ years) living in Salem &amp; nearby Oregon communities</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; background: var(--cream); border-radius: 12px; padding: 1rem 1.25rem; font-weight: 600; color: var(--midnight);">
+            <i class="fa-solid fa-circle-check" style="color: var(--midnight); font-size: 1.25rem;"></i>
+            <span>Able to give consent and complete short conversational questionnaires</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; background: var(--cream); border-radius: 12px; padding: 1rem 1.25rem; font-weight: 600; color: var(--midnight);">
+            <i class="fa-solid fa-circle-check" style="color: var(--midnight); font-size: 1.25rem;"></i>
+            <span>Willing to attend the two 90-minute workshop sessions and share ideas</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; background: var(--cream); border-radius: 12px; padding: 1rem 1.25rem; font-weight: 600; color: var(--midnight);">
+            <i class="fa-solid fa-circle-check" style="color: var(--midnight); font-size: 1.25rem;"></i>
+            <span>No prior computer skills or tech background necessary!</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="mailto:fjagbo@willamette.edu?subject=CT4Life%20Workshop%20Registration" style="background: var(--field); color: var(--midnight-deep); font-weight: 800; padding: 0.75rem 1.75rem; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid fa-envelope"></i> Register by Emailing Dr. Fred Agbo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="ct-footer">
+    <div class="ct-footer-inner">
+      <div>
+        <h4 class="font-fraunces">CT4Life Project</h4>
+        <p style="font-size: 0.85rem; line-height: 1.5; color: #b9d3e1;">
+          Computational Thinking for Life-Long Learners. A research initiative by the iNTech Research Lab at Willamette University.
+        </p>
+      </div>
+
+      <div>
+        <h4>Project Pages</h4>
+        <ul>
+          <li><a href="./activities.html">Learning Activities</a></li>
+          <li><a href="./publications.html">Publications &amp; Grants</a></li>
+          <li><a href="./lessons.html">Lessons &amp; Tools</a></li>
+          <li><a href="./newsletters.html">Newsletters</a></li>
+          <li><a href="./adverts.html">Adverts &amp; Flyers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Willamette University</h4>
+        <ul>
+          <li>School of Computing &amp; Information Sciences</li>
+          <li>Ford Hall 209, Salem, OR 97301</li>
+          <li>PI: Dr. Fred Agbo (<a href="mailto:fjagbo@willamette.edu">fjagbo@willamette.edu</a>)</li>
+          <li><a href="../index.html">&larr; Back to Main iNTech Lab Site</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ct-footer-bottom">
+      &copy; 2026 CT4Life Initiative &bull; iNTech Research Lab &bull; Willamette University. Supported by Spencer Foundation &amp; NSF.
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('ctMenuBtn');
+    const nav = document.getElementById('ctNavLinks');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

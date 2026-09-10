@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iNTech Research Lab — Interactive Technology for Learning</title>
+  <meta name="description" content="iNTech Research Lab at Willamette University, directed by Dr. Fred Agbo. Pioneering research at the intersection of HCI, AI in Education, Computational Thinking, and Smart Learning Environments." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7fa',
+              100: '#dbeaf1',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#003B5C', // iNTech / Willamette Navy
+              800: '#012A42', // Deep Navy
+              900: '#001c2d',
+            },
+            accent: {
+              gold: '#F19C49',
+              teal: '#5FCBDA',
+              brick: '#9C0221',
+              emerald: '#10B981',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Fraunces"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .gradient-hero {
+      background: radial-gradient(circle at 20% 20%, rgba(95, 203, 218, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 80%, rgba(241, 156, 73, 0.12) 0%, transparent 40%),
+                  linear-gradient(135deg, #012A42 0%, #003B5C 60%, #082435 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .dark .glass-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .theme-tab.active {
+      background: #003B5C;
+      color: #ffffff;
+      box-shadow: 0 8px 20px -4px rgba(0, 59, 92, 0.4);
+    }
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(95, 203, 218, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ================= TOP NOTIFICATION / QUICK NAV ================= -->
+  <div class="bg-gradient-to-r from-brand-800 via-brand-700 to-accent-brick text-white text-xs sm:text-sm py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="bg-accent-gold text-brand-900 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Featured</span>
+        <span>Explore the <strong>CT4Life Initiative</strong> — Computational Thinking for Life-Long Learners.</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="./ct4life/index.html" class="inline-flex items-center gap-1 font-semibold text-accent-gold hover:text-white transition-colors underline underline-offset-4">
+          Visit CT4Life Site <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+        <span class="text-slate-400">|</span>
+        <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="hover:text-accent-teal transition-colors">
+          <i class="fa-brands fa-github text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center gap-3.5 group">
+          <div class="w-11 h-11 rounded-xl bg-brand-700 flex items-center justify-center text-white font-serif font-black text-2xl shadow-md group-hover:scale-105 group-hover:bg-brand-600 transition-all">
+            <span class="text-accent-gold">i</span>N
+          </div>
+          <div>
+            <div class="font-extrabold text-xl text-brand-800 tracking-tight leading-none group-hover:text-brand-600 transition-colors">
+              iNTech <span class="text-accent-gold font-normal">Lab</span>
+            </div>
+            <div class="text-[11px] text-slate-500 font-medium tracking-wide uppercase mt-0.5">
+              Willamette University
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#about" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 hover:bg-slate-100/70 rounded-lg transition-all">About</a>
+          <a href="#research-focus" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 hover:bg-slate-100/70 rounded-lg transition-all">Focus Areas</a>
+          <a href="#themes-repos" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 hover:bg-slate-100/70 rounded-lg transition-all">Themes &amp; Repos</a>
+          <a href="#publications" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 hover:bg-slate-100/70 rounded-lg transition-all">Publications</a>
+          <a href="#team" class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-700 hover:bg-slate-100/70 rounded-lg transition-all">Team</a>
+          <a href="./ct4life/index.html" class="px-3 py-2 text-sm font-bold text-accent-brick hover:bg-red-50 rounded-lg transition-all flex items-center gap-1.5">
+            <i class="fa-solid fa-heart-pulse text-xs"></i> CT4Life
+          </a>
+          <a href="#contact" class="ml-2 px-4 py-2 text-sm font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-lg shadow-sm hover:shadow transition-all">
+            Contact
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden p-2 text-slate-700 hover:text-brand-700 hover:bg-slate-100 rounded-lg focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div id="mobileMenu" class="hidden md:hidden pb-4 pt-2 border-t border-slate-100 space-y-1">
+        <a href="#about" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg">About</a>
+        <a href="#research-focus" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg">Focus Areas</a>
+        <a href="#themes-repos" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg">Themes &amp; Projects</a>
+        <a href="#publications" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg">Publications</a>
+        <a href="#team" class="block px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 rounded-lg">Team</a>
+        <a href="./ct4life/index.html" class="block px-3 py-2 text-base font-bold text-accent-brick hover:bg-red-50 rounded-lg">CT4Life Project Website</a>
+        <a href="#contact" class="block px-3 py-2 text-base font-bold text-brand-700 hover:bg-blue-50 rounded-lg">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="gradient-hero text-white relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
+    <!-- Ambient shapes -->
+    <div class="absolute inset-0 pointer-events-none opacity-20">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-accent-teal blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-accent-gold blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-accent-gold text-xs sm:text-sm font-semibold tracking-wide uppercase backdrop-blur-sm">
+            <i class="fa-solid fa-flask-vial"></i> Interactive Technology for Learning Research Lab
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white">
+            Shaping the Future of <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-teal via-white to-accent-gold">
+              Technology-Enhanced Education
+            </span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed max-w-2xl">
+            Welcome to the <strong>iNTech Research Lab</strong> at Willamette University. We pioneer human-centered solutions at the intersection of <strong>Human-Computer Interaction (HCI)</strong>, <strong>Artificial Intelligence</strong>, and <strong>Educational Technology</strong> to create smart, inclusive, and lifelong learning environments.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#themes-repos" class="px-6 py-3.5 rounded-xl font-bold text-brand-900 bg-accent-gold hover:bg-amber-400 shadow-lg hover:shadow-amber-500/25 transition-all flex items-center gap-2 text-base">
+              Explore Research Repositories <i class="fa-solid fa-arrow-down text-sm"></i>
+            </a>
+            <a href="./ct4life/index.html" class="px-6 py-3.5 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md transition-all flex items-center gap-2 text-base">
+              <i class="fa-solid fa-heart-pulse text-accent-teal"></i> CT4Life Project
+            </a>
+          </div>
+
+          <!-- Quick Metrics / Pillars -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15">
+            <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+              <i class="fa-solid fa-robot text-accent-teal text-xl mb-1"></i>
+              <div class="font-bold text-sm text-white">AI-Powered</div>
+              <div class="text-[11px] text-slate-300">Intelligent Systems</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+              <i class="fa-solid fa-brain text-accent-gold text-xl mb-1"></i>
+              <div class="font-bold text-sm text-white">CT Education</div>
+              <div class="text-[11px] text-slate-300">Unplugged &amp; Plugged</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+              <i class="fa-solid fa-vr-cardboard text-accent-teal text-xl mb-1"></i>
+              <div class="font-bold text-sm text-white">Immersive VR</div>
+              <div class="text-[11px] text-slate-300">Interactive Games</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+              <i class="fa-solid fa-users text-accent-gold text-xl mb-1"></i>
+              <div class="font-bold text-sm text-white">Lifelong Learning</div>
+              <div class="text-[11px] text-slate-300">Inclusive Co-Design</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card / Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-slate-900/60 backdrop-blur-xl p-6 text-white space-y-6">
+              
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold font-bold">
+                    <i class="fa-solid fa-landmark"></i>
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-white">Willamette University</div>
+                    <div class="text-xs text-slate-300">SCIS &bull; Ford Hall 209</div>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  Active Lab
+                </span>
+              </div>
+
+              <div class="space-y-3 text-sm text-slate-200">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded bg-brand-700/60 text-accent-teal flex items-center justify-center text-xs mt-0.5">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <p><strong class="text-white">Teacher-in-the-Loop AI:</strong> Designing transparent, controllable authoring tools for educators in VR STEM environments.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded bg-brand-700/60 text-accent-gold flex items-center justify-center text-xs mt-0.5">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <p><strong class="text-white">CT4Life Initiative:</strong> Empowering seniors &amp; lifelong learners in Oregon via co-designed computational thinking.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded bg-brand-700/60 text-accent-teal flex items-center justify-center text-xs mt-0.5">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <p><strong class="text-white">Immersive Mini-Games:</strong> VR platforms (iThinkSmart, Imikode) for cognitive development &amp; CS novices.</p>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="./ct4life/adverts.html" class="w-full py-2.5 px-4 rounded-xl font-bold bg-accent-brick hover:bg-red-700 text-white flex items-center justify-center gap-2 text-sm shadow transition-all">
+                  <i class="fa-solid fa-bullhorn"></i> View Upcoming Workshops &amp; Adverts
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <div class="relative">
+            <div class="w-full aspect-[4/3] rounded-2xl bg-gradient-to-tr from-brand-700 to-brand-900 shadow-xl overflow-hidden flex items-center justify-center p-8 text-white text-center">
+              <div class="space-y-4">
+                <div class="w-20 h-20 mx-auto rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-accent-gold text-4xl border border-white/20">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold">iNTech Research Lab</h3>
+                <p class="text-sm text-slate-200 max-w-xs mx-auto">
+                  Human-Centered Computing, Artificial Intelligence &amp; Digital Pedagogy at Willamette University
+                </p>
+                <div class="pt-2 flex justify-center gap-2">
+                  <span class="px-3 py-1 bg-white/10 rounded-full text-xs font-medium">Salem, Oregon</span>
+                  <span class="px-3 py-1 bg-accent-gold/20 text-accent-gold rounded-full text-xs font-bold">NSF &bull; Spencer Supported</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-5">
+          <div class="text-xs font-bold uppercase tracking-widest text-brand-700">About the Lab</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            Empowering Learners and Educators through Thoughtful Technology
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            At the <strong>iNTech (Interactive Technology for Learning) Research Lab</strong>, we investigate how emerging interactive computing systems—such as Generative AI, Virtual Reality (VR), and Smart Learning Environments (SLEs)—can be tailored to serve human agency rather than replace it.
+          </p>
+          <p class="text-slate-600 text-base leading-relaxed">
+            Led by <strong>Dr. Fred Agbo</strong> in the School of Computing and Information Sciences (SCIS) at Willamette University, our interdisciplinary group designs, builds, and evaluates pedagogically grounded systems. We bridge computing education across the entire lifespan: from K-12 novices and undergraduate computer scientists to older adult lifelong learners.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 pt-3">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="text-brand-700 font-bold text-base flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-bullseye text-accent-gold"></i> Our Mission
+              </div>
+              <p class="text-xs text-slate-600 leading-normal">
+                To democratize computing education through inclusive, accessible, and scientifically grounded technology interventions.
+              </p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="text-brand-700 font-bold text-base flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-users-gear text-accent-teal"></i> Co-Design Pedagogy
+              </div>
+              <p class="text-xs text-slate-600 leading-normal">
+                Active participatory research engaging real teachers, students, and community seniors as equal design partners.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH FOCUS AREAS ================= -->
+  <section id="research-focus" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="text-xs font-bold uppercase tracking-widest text-brand-700">Core Expertise</div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Our Research Focus Domains
+        </h2>
+        <p class="text-slate-600 text-base">
+          We conduct cutting-edge research across multiple domains to advance educational technology and human-computer interaction.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Focus 1 -->
+        <div class="glass-card rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border-t-4 border-t-brand-700">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">Smart Learning Environments</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Designing intelligent, context-aware platforms that adapt to individual learning needs and provide real-time feedback using ML and learner modeling.
+          </p>
+        </div>
+
+        <!-- Focus 2 -->
+        <div class="glass-card rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border-t-4 border-t-accent-gold">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">Computational Thinking &amp; Andragogy</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Developing unplugged and plugged approaches to teach problem-solving, abstraction, and logic across diverse populations, including adult and senior learners.
+          </p>
+        </div>
+
+        <!-- Focus 3 -->
+        <div class="glass-card rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border-t-4 border-t-accent-brick">
+          <div class="w-12 h-12 rounded-xl bg-red-50 text-accent-brick flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-universal-access"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">Inclusive Technology &amp; HCC</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Creating accessible and equitable educational interfaces ensuring computer science education reaches underrepresented groups and global south contexts.
+          </p>
+        </div>
+
+        <!-- Focus 4 -->
+        <div class="glass-card rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border-t-4 border-t-brand-600">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-brand-600 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">AI in Education &amp; GenAI</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Investigating generative AI tools, prompt pedagogy, and teacher-in-the-loop scaffolding that prevents cognitive offloading and fosters deep comprehension.
+          </p>
+        </div>
+
+        <!-- Focus 5 -->
+        <div class="glass-card rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border-t-4 border-t-accent-teal">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-vr-cardboard"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">HCI &amp; Immersive Virtual Reality</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Creating high-immersion VR simulations and gamified mini-games (iThinkSmart, Imikode) that turn abstract computational concepts into interactive 3D worlds.
+          </p>
+        </div>
+
+        <!-- Focus 6 -->
+        <div class="glass-card rounded-2xl p-7 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 border-t-4 border-t-emerald-600">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">Digital Pedagogy &amp; Analytics</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Mining student programming traces to detect misconception signals, evaluate formative competencies, and empower instructors with actionable dashboards.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH THEMES & REPOSITORIES (TABBED CATEGORIZATION) ================= -->
+  <section id="themes-repos" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div class="space-y-2">
+          <div class="text-xs font-bold uppercase tracking-widest text-brand-700">Project Repositories &amp; Initiatives</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
+            Categorized Research Themes
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base max-w-2xl">
+            Select a research theme tab below to explore specific project platforms, source code repositories, and dedicated sub-sites.
+          </p>
+        </div>
+        <div>
+          <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-all shadow-sm">
+            <i class="fa-brands fa-github text-base"></i> View GitHub Organization
+          </a>
+        </div>
+      </div>
+
+      <!-- Theme Tabs Navigation -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none border-b border-slate-200" id="themeTabs">
+        <button onclick="switchTab('all')" class="theme-tab active px-5 py-2.5 rounded-xl text-sm font-bold transition-all whitespace-nowrap" data-tab="all">
+          <i class="fa-solid fa-layer-group mr-1.5"></i> All Themes (6)
+        </button>
+        <button onclick="switchTab('ct4life')" class="theme-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all whitespace-nowrap" data-tab="ct4life">
+          <i class="fa-solid fa-heart-pulse mr-1.5 text-accent-brick"></i> CT4Life &amp; Lifelong Learning
+        </button>
+        <button onclick="switchTab('vr')" class="theme-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all whitespace-nowrap" data-tab="vr">
+          <i class="fa-solid fa-vr-cardboard mr-1.5 text-teal-600"></i> Immersive VR &amp; Games
+        </button>
+        <button onclick="switchTab('genai')" class="theme-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all whitespace-nowrap" data-tab="genai">
+          <i class="fa-solid fa-robot mr-1.5 text-sky-600"></i> GenAI &amp; Teacher-in-the-Loop
+        </button>
+        <button onclick="switchTab('sle')" class="theme-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all whitespace-nowrap" data-tab="sle">
+          <i class="fa-solid fa-chart-pie mr-1.5 text-emerald-600"></i> Smart Environments &amp; Analytics
+        </button>
+        <button onclick="switchTab('inclusive')" class="theme-tab px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all whitespace-nowrap" data-tab="inclusive">
+          <i class="fa-solid fa-people-roof mr-1.5 text-amber-600"></i> Inclusive STEM &amp; Commons
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8" id="projectsContainer">
+        
+        <!-- Project 1: CT4Life (Featured) -->
+        <div class="project-card rounded-2xl overflow-hidden border-2 border-accent-gold/40 bg-white shadow-lg hover:shadow-xl transition-all flex flex-col justify-between" data-category="ct4life">
+          <div class="relative bg-gradient-to-br from-brand-800 to-brand-700 p-6 text-white">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-accent-gold text-brand-900 uppercase tracking-wider">
+                Flagship Initiative
+              </span>
+              <span class="text-xs text-slate-300 font-mono">Theme: CT4Life</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-2">CT4Life Project</h3>
+            <p class="text-xs text-slate-200 leading-relaxed">
+              Computational Thinking for Life-Long Learners. Broadening computing education participation for older adults (60+) in Oregon through co-designed plugged &amp; unplugged problem-solving.
+            </p>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-1 bg-amber-50 text-amber-800 font-semibold rounded-md border border-amber-200">Andragogy</span>
+                <span class="px-2.5 py-1 bg-blue-50 text-blue-800 font-semibold rounded-md border border-blue-200">Co-Design</span>
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-800 font-semibold rounded-md border border-emerald-200">Spencer Funded</span>
+                <span class="px-2.5 py-1 bg-red-50 text-red-800 font-semibold rounded-md border border-red-200">Senior Workshops</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Features dedicated curricula, participatory design sessions with Willamette undergraduates, cognitive stimulation activities, and community workshops.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+              <a href="./ct4life/index.html" class="flex-1 py-2.5 px-4 rounded-xl font-bold bg-brand-700 hover:bg-brand-800 text-white text-xs text-center shadow-sm transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open CT4Life Site
+              </a>
+              <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs text-center transition-all" title="GitHub Repository">
+                <i class="fa-brands fa-github text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: iThinkSmart VR Mini-Games -->
+        <div class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="vr">
+          <div class="bg-slate-900 p-6 text-white">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30 uppercase">
+                VR Mini-Games
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Theme: VR &amp; Games</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">iThinkSmart &amp; Imikode</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Immersive Virtual Reality games (River Crossing, Tower of Hanoi, Mt. Patti) designed with Unity &amp; C# to teach computational thinking concepts to novice programmers.
+            </p>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Unity 3D</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">C#</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Mobile VR</span>
+                <span class="px-2.5 py-1 bg-teal-50 text-teal-800 font-semibold rounded-md">Springer ETR&amp;D</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Assesses learner recursion, decomposition, and algorithmic thinking dynamically within 3D game scenarios.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+              <a href="https://link.springer.com/article/10.1007/s11423-022-10161-5" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl font-bold bg-slate-800 hover:bg-slate-900 text-white text-xs text-center shadow-sm transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-file-lines"></i> View Paper
+              </a>
+              <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs text-center transition-all" title="GitHub Repository">
+                <i class="fa-brands fa-github text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Teacher-in-the-Loop GenAI VR Interface -->
+        <div class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="genai">
+          <div class="bg-gradient-to-br from-brand-900 to-sky-950 p-6 text-white">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30 uppercase">
+                Summer SCRP 2026
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Theme: GenAI</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Teacher-in-the-Loop AI VR</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              A modular web authoring interface + immersive VR system allowing non-technical educators to set AI scaffolding boundaries, preventing student cognitive offloading.
+            </p>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">React / WebStack</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">LLM Orchestration</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">VR STEM Scaffolding</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Teachers act as the architects of student learning by defining AI response boundaries, pedagogical constraints, and learning milestones.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+              <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl font-bold bg-brand-700 hover:bg-brand-800 text-white text-xs text-center shadow-sm transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-brands fa-github"></i> Project Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: CS1 Misconception Signals & Analytics -->
+        <div class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="sle">
+          <div class="bg-slate-900 p-6 text-white">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase">
+                ACM SIGCSE 2026
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Theme: Analytics</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">CS1 Misconception Signals</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Moving beyond correctness-only knowledge tracing to expert-refined misconception signals derived from student programming code traces and compiler interactions.
+            </p>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Learning Analytics</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">CodeWorkout Traces</span>
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-800 font-semibold rounded-md">ACM Digital Library</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Human-in-the-loop validated system providing actionable diagnostic summaries directly to introductory programming instructors.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+              <a href="https://dl.acm.org/doi/10.1145/3830800.3830801" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl font-bold bg-slate-800 hover:bg-slate-900 text-white text-xs text-center shadow-sm transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-file-lines"></i> View Publication
+              </a>
+              <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs text-center transition-all" title="GitHub Repository">
+                <i class="fa-brands fa-github text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Willamette Civic Commons -->
+        <div class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="inclusive">
+          <div class="bg-gradient-to-br from-amber-950 to-slate-900 p-6 text-white">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase">
+                Civic Tech
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Theme: Commons</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Civic Commons Initiative</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Fostering engaged democracy, open knowledge exchange, and community resources between Willamette University students, faculty, and the public commons.
+            </p>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Democracy</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Civic Tech</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Salem &amp; Portland</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Connects academic computing solutions with real-world social impact and community collaboration priorities.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+              <a href="https://my.willamette.edu/site/civic-commons" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl font-bold bg-slate-800 hover:bg-slate-900 text-white text-xs text-center shadow-sm transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Civic Commons Hub
+              </a>
+              <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs text-center transition-all" title="GitHub Repository">
+                <i class="fa-brands fa-github text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Co-Design CT & Scratch in K-12 -->
+        <div class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="inclusive">
+          <div class="bg-slate-900 p-6 text-white">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 uppercase">
+                K-12 STEM Co-Design
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Theme: Pedagogy</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">K-12 Scratch CT Co-Design</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Empirical framework for integrating computational thinking in secondary schools using participatory co-design pedagogy, Scratch simulations, and game construction.
+            </p>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Scratch 3.0</span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md">Co-Design Pedagogy</span>
+                <span class="px-2.5 py-1 bg-blue-50 text-blue-800 font-semibold rounded-md">Springer EFIS</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Published in Springer Education and Information Technologies, detailing a 4-phase co-design workflow.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+              <a href="https://link.springer.com/article/10.1007/s10639-025-13386-y" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl font-bold bg-slate-800 hover:bg-slate-900 text-white text-xs text-center shadow-sm transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-file-lines"></i> View Publication
+              </a>
+              <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs text-center transition-all" title="GitHub Repository">
+                <i class="fa-brands fa-github text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS SECTION ================= -->
+  <section id="publications" class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div class="space-y-2">
+          <div class="text-xs font-bold uppercase tracking-widest text-brand-700">Peer-Reviewed Scholarship</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
+            Selected Publications
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base max-w-2xl">
+            Our lab regularly publishes in top-tier ACM, IEEE, and Springer conferences and journals in computing education, HCI, and learning sciences.
+          </p>
+        </div>
+        <div>
+          <a href="https://scholar.google.com/citations?user=vGcFZC4AAAAJ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-700 font-bold text-sm hover:bg-slate-100 transition-all shadow-sm">
+            <i class="fa-solid fa-graduation-cap text-brand-700"></i> Google Scholar Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Publication Items List -->
+      <div class="space-y-4">
+        
+        <!-- 2026 Pub 1 -->
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-500 transition-all">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-700 text-white">2026</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-brand-800 border border-blue-200">ACM SIGCSE / CS Education</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-slate-900 mb-1">
+            From Correctness to Expert-Refined Misconception Signals with Human-in-the-Loop Validation in CS1 Programming Education
+          </h3>
+          <p class="text-xs text-slate-500 font-medium mb-3">
+            Aruleba, K.; Oyelere, S.S., <strong>Agbo, F.J.</strong>, Jere, N. (2026). ACM Digital Library.
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Knowledge tracing in introductory programming is commonly framed as predicting problem outcomes. This study demonstrates how expert-refined misconception signals derived from CodeWorkout trace data explain the true nature of student struggle in an actionable way.
+          </p>
+          <a href="https://dl.acm.org/doi/10.1145/3830800.3830801" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-900 hover:underline">
+            <i class="fa-solid fa-link text-[11px]"></i> View on ACM Digital Library
+          </a>
+        </div>
+
+        <!-- 2025 Pub: CT4Life Andragogy -->
+        <div class="p-6 rounded-2xl bg-white border-2 border-accent-gold/40 shadow-sm hover:border-accent-gold transition-all">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-accent-gold text-brand-900">2025</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-900 border border-amber-200">CT4Life &bull; Adult Learning</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-slate-900 mb-1">
+            Exploring Andragogy Principles for Broadening Participation in Computing Education for Lifelong Learners
+          </h3>
+          <p class="text-xs text-slate-500 font-medium mb-3">
+            <strong>Agbo, F. J.</strong>, &amp; Everetts, C. (2025). ACM SIGCSE / Broadening Participation in Computing.
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Examined how to design computing education for older adults (age 60+) using Malcolm Knowles' andragogy principles. Compares plugged vs. unplugged computational thinking interventions for social collaboration and cognitive stimulation.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://dl.acm.org/doi/abs/10.1145/3704637.3734757" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-900 hover:underline">
+              <i class="fa-solid fa-link text-[11px]"></i> ACM Link
+            </a>
+            <a href="./ct4life/publications.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-accent-brick hover:underline">
+              <i class="fa-solid fa-heart-pulse text-[11px]"></i> CT4Life Publications Hub
+            </a>
+          </div>
+        </div>
+
+        <!-- 2025 Pub: GenAI Literature Review -->
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-500 transition-all">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-700 text-white">2025</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200">Generative AI &bull; ScienceDirect</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-slate-900 mb-1">
+            Computing Education Using Generative Artificial Intelligence Tools: A Systematic Literature Review
+          </h3>
+          <p class="text-xs text-slate-500 font-medium mb-3">
+            <strong>Agbo, F. J.</strong>, Olivia, C., Oguibe, G., Sanusi, I. T., &amp; Sani, G. (2025). Computers and Education Open / ScienceDirect.
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            A comprehensive systematic literature review analyzing 78 empirical studies examining GenAI tools across CS curricula, identifying key opportunities, assessment challenges, and pedagogical strategies.
+          </p>
+          <a href="https://www.sciencedirect.com/science/article/pii/S2666557325000254" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-900 hover:underline">
+            <i class="fa-solid fa-link text-[11px]"></i> ScienceDirect Article
+          </a>
+        </div>
+
+        <!-- 2023 Pub: VR Mini-Games -->
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-brand-500 transition-all">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-700 text-white">2023</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-800 border border-teal-200">HCI &bull; Virtual Reality &bull; Springer</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-slate-900 mb-1">
+            Examining the Relationships Between Students’ Perceptions of Technology, Pedagogy, and Cognition in Immersive VR Mini Games
+          </h3>
+          <p class="text-xs text-slate-500 font-medium mb-3">
+            <strong>Agbo, F. J.</strong>, Olaleye, S. A., Bower, M., &amp; Oyelere, S. S. (2023). Smart Learning Environments, Springer.
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Investigated how game element clarity, immersion, and interaction in the iThinkSmart VR platform predict learners' reflective thinking and comprehension in computational thinking.
+          </p>
+          <a href="https://link.springer.com/article/10.1186/s40561-023-00233-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-900 hover:underline">
+            <i class="fa-solid fa-link text-[11px]"></i> Springer Article
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= LAB MEMBERS / TEAM ================= -->
+  <section id="team" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="text-xs font-bold uppercase tracking-widest text-brand-700">People</div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Meet Our Research Team
+        </h2>
+        <p class="text-slate-600 text-base">
+          Our laboratory brings together faculty, graduate researchers, undergraduate scholars, and community collaborators.
+        </p>
+      </div>
+
+      <!-- PI Spotlight -->
+      <div class="mb-14 p-8 rounded-3xl bg-gradient-to-r from-brand-800 via-brand-700 to-slate-900 text-white shadow-xl">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-4 text-center md:text-left">
+            <div class="w-32 h-32 mx-auto md:mx-0 rounded-2xl bg-gradient-to-tr from-accent-gold to-amber-200 p-1 shadow-lg">
+              <div class="w-full h-full rounded-2xl bg-brand-900 flex items-center justify-center font-serif text-4xl font-black text-accent-gold">
+                FA
+              </div>
+            </div>
+            <h3 class="font-serif text-2xl font-bold mt-4">Dr. Fred Agbo</h3>
+            <div class="text-accent-gold text-sm font-semibold">Principal Investigator &amp; Lab Director</div>
+            <div class="text-xs text-slate-300 mt-1">Assistant Professor of Computer Science<br/>Willamette University</div>
+            <div class="flex items-center justify-center md:justify-start gap-3 mt-4">
+              <a href="mailto:fjagbo@willamette.edu" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all" title="Email"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://fredagbo.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all" title="Website"><i class="fa-solid fa-globe"></i></a>
+              <a href="https://scholar.google.com/citations?user=vGcFZC4AAAAJ" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all" title="Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+          </div>
+          <div class="md:col-span-8 space-y-3 text-slate-200 text-sm leading-relaxed border-t md:border-t-0 md:border-l border-white/15 pt-6 md:pt-0 md:pl-8">
+            <p>
+              Dr. Fred Agbo's research focuses on <strong>Human-Computer Interaction (HCI)</strong>, <strong>Smart Learning Environments</strong>, <strong>Computational Thinking Education</strong>, and <strong>AI in Education</strong>. He investigates how novel interactive computing paradigms empower diverse learners across different ages and societal contexts.
+            </p>
+            <p>
+              Under his mentorship, students at iNTech Lab participate directly in peer-reviewed research, prototype design, grant-funded initiatives (NSF, Spencer Foundation), and active community engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Researchers Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Member: Amos Oyelere -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-brand-700 text-white font-bold flex items-center justify-center font-serif text-lg">
+              AO
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-slate-900">Amos Oyelere</h4>
+              <p class="text-xs text-brand-700 font-semibold">Doctoral Researcher</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Interests:</strong> CS Education, Computational Thinking, Co-Design Pedagogy, Scratch.
+          </p>
+          <div class="text-[11px] text-slate-400 font-medium">School of Computing &bull; UEF Collab</div>
+        </div>
+
+        <!-- Member: Nabeela Kausar -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-accent-brick text-white font-bold flex items-center justify-center font-serif text-lg">
+              NK
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-slate-900">Nabeela Kausar</h4>
+              <p class="text-xs text-brand-700 font-semibold">PhD Researcher</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Interests:</strong> AI in Education, Generative AI, Learning Analytics.
+          </p>
+          <div class="text-[11px] text-slate-400 font-medium">School of Computing &bull; UEF Collab</div>
+        </div>
+
+        <!-- Member: Ethan Bucy -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-accent-gold text-brand-900 font-bold flex items-center justify-center font-serif text-lg">
+              EB
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-slate-900">Ethan Bucy</h4>
+              <p class="text-xs text-brand-700 font-semibold">Student Researcher</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Interests:</strong> Human-Centered Design, VR Environments, Transportation Algorithms.
+          </p>
+          <div class="text-[11px] text-slate-400 font-medium">Willamette University SCIS</div>
+        </div>
+
+        <!-- Member: Jordan Fasolt-Holmes -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-teal-700 text-white font-bold flex items-center justify-center font-serif text-lg">
+              JF
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-slate-900">Jordan Fasolt-Holmes</h4>
+              <p class="text-xs text-brand-700 font-semibold">Research Assistant</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Interests:</strong> Human-Computer Interaction, AI in Education, Robotics.
+          </p>
+          <div class="text-[11px] text-slate-400 font-medium">Willamette University SCIS</div>
+        </div>
+
+        <!-- Member: Lola Cordero -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-purple-700 text-white font-bold flex items-center justify-center font-serif text-lg">
+              LC
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-slate-900">Lola Cordero</h4>
+              <p class="text-xs text-brand-700 font-semibold">Student Researcher</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Interests:</strong> Computer Science Education, Pedagogy, Inclusive Computing.
+          </p>
+          <div class="text-[11px] text-slate-400 font-medium">Willamette University SCIS</div>
+        </div>
+
+        <!-- Member: Tusker Howard -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-slate-700 text-white font-bold flex items-center justify-center font-serif text-lg">
+              TH
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-base text-slate-900">Tusker Howard</h4>
+              <p class="text-xs text-brand-700 font-semibold">Research Assistant</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Interests:</strong> Interactive Interfaces, Web Stack, VR Prototyping.
+          </p>
+          <div class="text-[11px] text-slate-400 font-medium">Willamette University SCIS</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & CALL TO ACTION ================= -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-brand-900 via-brand-800 to-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-gold/20 text-accent-gold text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-handshake"></i> Collaborate With Us
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-black text-white">
+            Join Our Research Community
+          </h2>
+          <p class="text-slate-200 text-base leading-relaxed">
+            Interested in collaborating on research, joining the lab as a student researcher, or participating in the <strong>CT4Life senior workshops</strong>? We are always excited to welcome passionate individuals and community partners.
+          </p>
+          
+          <div class="space-y-3 pt-2 text-sm text-slate-200">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-accent-gold w-5"></i>
+              <span><strong>Email:</strong> <a href="mailto:fjagbo@willamette.edu" class="hover:text-accent-teal underline">fjagbo@willamette.edu</a></span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-location-dot text-accent-teal w-5"></i>
+              <span><strong>Office:</strong> Ford Hall 209, Willamette University, Salem, OR 97301</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-brands fa-github text-accent-gold w-5"></i>
+              <span><strong>GitHub:</strong> <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="hover:text-accent-teal underline">github.com/intechlab360</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white space-y-5">
+            <h3 class="font-serif font-bold text-xl text-accent-gold">Quick Lab Inquiries</h3>
+            <p class="text-xs text-slate-200">
+              Students and researchers interested in joining upcoming projects (VR, WebXR, GenAI Scaffolding, CT4Life):
+            </p>
+            <a href="mailto:fjagbo@willamette.edu?subject=Interest%20in%20iNTech%20Lab" class="w-full py-3.5 px-4 rounded-xl font-bold bg-accent-gold hover:bg-amber-400 text-brand-900 flex items-center justify-center gap-2 text-sm shadow transition-all">
+              <i class="fa-solid fa-paper-plane"></i> Send an Inquiry to Dr. Agbo
+            </a>
+            <div class="pt-2 text-center">
+              <a href="./ct4life/index.html" class="text-xs text-accent-teal hover:underline font-semibold">
+                Looking for CT4Life Community Workshops? Click here &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-900 text-slate-400 text-xs py-10 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="font-bold text-slate-200">iNTech Research Lab</span> &bull; Interactive Technology for Learning &bull; Willamette University
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#themes-repos" class="hover:text-white transition-colors">Research Themes</a>
+        <a href="./ct4life/index.html" class="hover:text-white transition-colors">CT4Life Project</a>
+        <a href="https://github.com/intechlab360" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Theme Tabs Filtering
+    function switchTab(category) {
+      // Update tab buttons style
+      const tabs = document.querySelectorAll('.theme-tab');
+      tabs.forEach(t => {
+        if (t.dataset.tab === category) {
+          t.classList.add('active');
+          t.classList.remove('bg-slate-100', 'text-slate-700');
+        } else {
+          t.classList.remove('active');
+          t.classList.add('bg-slate-100', 'text-slate-700');
+        }
+      });
+
+      // Filter project cards
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
